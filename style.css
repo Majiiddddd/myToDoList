@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #a0a0a0;
+    font-family: sans-serif;
+}
+#liveTime {
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #1D5D9B;
+    color: white;
+    border-radius: 0 0 10px 10px;
+  }
+
+.container{
+    margin-top: 20px;
+    width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.container .header{
+    border-radius: 10px 10px 0 0;
+    background-color:#1D5D9B;
+    padding:15px 40px 30px ;
+    color:white ;
+    text-align: center;
+    
+}
+
+.container .header h2{
+    margin: 12px;
+    font-size: 2em;
+}
+
+.container .header input{
+    width: 75%;
+    padding: 10px;
+    float: left;
+    border: none;
+    outline: none;
+    font-size: 1em;
+
+
+}
+
+.addBtn{
+    width: 25%;
+    float: left;
+    border: none;
+    padding: 10px;
+    background: #75C2F6;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addBtn:hover{
+    background-color:#2baaff ;
+}
+
+.container .header::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container .taskList{
+    max-height: 300px;
+    overflow-y: auto;
+    list-style-type: none;
+}
+
+.taskList li{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background-color: #FBEEAC;
+    font-size: 1.2em;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.taskList li:hover{
+    background-color:#F4D160;
+
+}
+
+.closeBtn{
+    display: none;
+    position: absolute;
+    right: 15px;
+}
+
+.taskList li:hover .closeBtn{
+    display: inline-block;
+}
+
+.taskList li .closeBtn i:hover{
+    color: #1D5D9B;
+}
+
+.taskList li.done{
+    background-color:#7A9D54 ;
+    color: white;
+    text-decoration: line-through;
+}
+
+.taskList li.done::before{
+    content: '';
+    width: 10px;
+    height: 16px;
+    position: absolute;
+    left: 19px;
+    top: 7px;
+    border-color: #fff;
+    border-width: 0 2px 2px 0 ;
+    border-style: solid;
+    transform: rotate(45deg);
+}
+
